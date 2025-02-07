@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<html>
+<body>
+    <script>	
+    	let a = 10
+    	console.log(a)
+    </script>
+</body>
+</html>
+
+why do we write script at end of body tag
+To improve the user experience and increase the performance of the rendering HTML page. and don't want any initial values from the script.
+
+Is right to use script tag in heaad
+-> No, but This can be useful if the script needs to modify the DOM structure or content before the page is fully loaded.
+we can also use script tag in head by using defer.
+
+When do we write in body and head
+-> Head: When we want to initialize some global values to be used in the HTML page that time we need to put script tag in the head.
+   Body: When we want to improve the user experience. and don't want any initial values.
+
+script tag import syntax.
+1) File path
+2) File name
+3) Script url
+
+concatenation.
+string + any = string
