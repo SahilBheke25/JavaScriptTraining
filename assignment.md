@@ -37,7 +37,7 @@ testAsyncFunction()
 - Reject -> Error caught in testAsyncFunction:  Test Reject
             Response in then block:  undefined
 
-# What will be printed to the console?
+# 4. What will be printed to the console?
 ```js
 const testAsyncFunction = () => {
 return Promise.reject('Test static reject');
@@ -50,7 +50,7 @@ console.log('Response in then block', res);
 ```
 - Error in catch block Test static reject
 
-# What will be printed to the console?
+# 5. What will be printed to the console?
 ```js
 const testAsyncFunction = () => {
 return new Promise((resolve, reject) => {
@@ -77,6 +77,6 @@ console.log('Response in then block: ', res);
             Error in catch block:  Error: Forced error
             error location.
 
-# 4. Create a promise that makes a fetch call, but resolves with the data only 2 seconds after the data has been received in the fetch.
+# 6. Create a promise that makes a fetch call, but resolves with the data only 2 seconds after the data has been received in the fetch.
 
-# 5. Complete the above tasks with async/await.
+# 7. Complete the above tasks with async/await.
