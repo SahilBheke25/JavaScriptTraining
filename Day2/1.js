@@ -1,36 +1,20 @@
-// 2. Using promises - write a function that fetches data from an API endpoint (GET https://reqres.in/api/users ). 
-// Log the data into the console once it is received
+// 1. Write a function that can stop execution of a function for the number of milliseconds sent as an argument
 
-// fetch("https://reqres.in/api/users")
-// .then((value)=>{console.log(value)})
-// .catch((error) => console.log("Error fetching data: ", error))
-
-// function fetchData() {
-//     const data = fetch("https://reqres.in/api/users")
-//         .then((response) => {
-//             if (!response.ok) {
-//                 throw new Error(`HTTP error! Status: ${response.status}`);
-//             }
-//             return response.json();
-//         })
-//         .then((data) => console.log(data))
-//         .catch((error) => console.error("Error fetching data:", error));
-
-//     console.log(data)
+// function sleep(time){  // why this is not working
+//     return new Promise(() => setTimeout(()=>console.log("Blocking call"), time))
 // }
-// fetchData()
 
-async function fetch_data(){
-    const fetchPromise = await fetch("https://reqres.in/api/users")
-        .then((response) => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            return response.json();
-        })
-        .then((response) => {
-            console.log(JSON.stringify(response));
-        });
-};
+// function sleep(time){
+//     return new Promise(() => setTimeout(()=>{}, time))
+// }
 
-fetch_data();
+function sleep(time){
+    return new Promise((resolves) => setTimeout(resolves, time))
+}
+const func = async () => {
+    console.log("Printing before")
+    //Call your function here eg. sleep(3000)
+    await sleep(4000)
+    console.log("Printing after")
+}
+func()

@@ -1,17 +1,15 @@
-// 1. Write a function that can stop execution of a function for the number of milliseconds sent as an argument
+// 2. Using promises - write a function that fetches data from an API endpoint (GET https://reqres.in/api/users ). 
+// Log the data into the console once it is received
 
-// function sleep(time){  // why this is not working
-//     return new Promise(() => setTimeout(()=>console.log("Blocking call"), time))
-// }
 
-function sleep(time){
-    return new Promise((resolve) => setTimeout(resolve, time))
-}
-const func = async () => {
-    console.log("Printing before")
-    //Call your function here eg. sleep(3000)
-    await sleep(4000)
-    console.log("Printing after")
-}
-func()
+function fetch_data(){
+    fetch("https://reqres.in/api/users")
+        .then((response) => {
+            return response.json();
+        })
+        .then((response) => {
+            console.log(response);
+        });
+};
 
+fetch_data()
