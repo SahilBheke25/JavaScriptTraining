@@ -37,15 +37,11 @@ function quesitonTwo() {
     console.log(newObj);
 
     function filterObject(obj) {
-        let keys = Object.keys(obj)
-        let entries = Object.entries(obj)
 
-        console.log("keys: ", keys);
-        console.log("entries: ", entries);
-
-        return Object.keys(Object.fromEntries(
-            Object.entries(obj).filter(entry => typeof entry[1] === 'object' || Array.isArray(entry[1]))
+        return (Object.fromEntries(
+            Object.entries(obj).filter(entry => typeof entry[1] !== 'object')
         ));
+
     }
     
 } quesitonTwo()
