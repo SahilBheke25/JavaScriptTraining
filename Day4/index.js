@@ -1,18 +1,16 @@
-function memorized(a){
-    const m = new Map
-    m.set(a, true)
-    return (a) => {
-        if(m.has(a)){
-            console.log(m.get(a))
+function memorized(value){
+    const map = new Map
+    return (value) => {
+        if(map.has(value)){
+            console.log(map.get(value))
         }else{
-            m.set(a, true)
+            map.set(value, true)
             console.log("New entry created")
         }
-        
     }
 }
 
-const clouser = memorized(3)
+const clouser = memorized()
 clouser(3)
 clouser(4)
 clouser(4)
