@@ -2,6 +2,7 @@ let i = 0
 let arr = [0]
 
 const id2 = document.getElementById('textarea');
+
 function handleEvent() {
     id2.innerText = arr
     i++
@@ -10,7 +11,6 @@ function handleEvent() {
     }else{
         arr[i] = arr[i-1] + arr[i-2]
     }
-    
 }   
 
 const id = document.getElementById('button')

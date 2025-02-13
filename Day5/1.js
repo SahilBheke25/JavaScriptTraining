@@ -25,6 +25,6 @@ class MyYup {
   required(value) {
     return (!value || value.length == 0) ? 0 : 1
   }
-
+  
 }
 
