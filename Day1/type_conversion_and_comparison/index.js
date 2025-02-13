@@ -1,69 +1,64 @@
 function questionOne() {
+  let age = 25;
 
-    let age = 25
+  if (age <= 0) {
+    console.log("Invalid age");
+  } else if (age <= 12 && age >= 1) {
+    console.log("Child");
+  } else if (age <= 18) {
+    console.log("Teen");
+  } else {
+    console.log("Adult");
+  }
 
-    if (age > 18) {
-        console.log("Adult");
-    }
-    else if (age <= 18 && age >= 13) {
-        console.log("Teen")
-    } else {
-        console.log("Child");
-    }
-
-    switch (true) {
-        case age > 18:
-            console.log("Adult");
-            break
-        case age < 13:
-            console.log("Child")
-        default:
-            console.log("Teen");
-    }
-
+  switch (true) {
+    case age > 18:
+      console.log("Adult");
+      break;
+    case age >= 13:
+      console.log("Teen");
+    case age > 0:
+      console.log("Child");
+    default:
+      console.log("Invalid age");
+  }
 }
-questionOne()
-
+questionOne();
 
 function questionTwo() {
+  let arraySize = 25;
+  let array = [];
 
-    let arraySize = 25;
-    let array = []
+  for (let i = 0; i < 25; i++) {
+    array.push(i);
+  }
 
-    for (let i = 0; i < 25; i++) {
-        array.push(i)
-    }
-
-    console.log(array);
-
+  console.log(array);
 }
-questionTwo()
-
+questionTwo();
 
 function questionThree() {
+  let arraySize = 25;
+  let array = [];
+  let i = arraySize;
 
-    let arraySize = 25;
-    let array = []
-    let i = arraySize
+  while (i--) {
+    array.push(24 - i);
+  }
 
-    while (i--) {
-        array.push(24 - i)
-    }
-
-    console.log(array);
-
+  console.log(array);
 }
-questionThree()
+questionThree();
 
 function questionFour() {
-    function test(callback) {
-        return callback;
-    }
-    function callbackFunc() {
-        console.log("Calling the callback function");
-        return 5;
-    }
+  function test(callback) {
+    return callback;
+  }
+  function callbackFunc() {
+    console.log("Calling the callback function");
+    return 5;
+  }
 
-    test(() => callbackFunc()) 
+  test(() => callbackFunc());
 }
-questionFour()
+questionFour();
