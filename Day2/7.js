@@ -28,7 +28,7 @@
 
 const fetch_data = async () => {
     const res = await fetch("https://reqres.in/api/users")
-    const data = await res.json()
+    const data = await res.json().catch((err) => reject("error message: ", err))
     console.log(data);
 }   
 fetch_data()

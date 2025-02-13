@@ -9,7 +9,8 @@ function fetch_data(){
         })
         .then((response) => {
             console.log(response);
-        });
+        })
+        .catch((err) => reject("error message: ", err));
 };
 
 fetch_data()
