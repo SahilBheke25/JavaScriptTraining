@@ -18,11 +18,11 @@ class MyYup {
   }
   
   isValid(value){
-    if(!validation.required(value)){
+    if(!this.required(value)){
       alert("Required")
-    }else if(!validation.min(value)){
+    }else if(!this.min(value)){
       alert("False, input length shoulb be greater than 2!")
-    }else if(!validation.max(value)){
+    }else if(!this.max(value)){
       alert("False, input length shoulb be smaller than 11!")
     }else{
       alert("True")
